@@ -124,6 +124,11 @@
         "icon": "$(refresh)"
       },
       {
+        "command": "references-view.peekCallHierarchy",
+        "title": "%cmd.references-view.peekCallHierarchy%",
+        "category": "Calls"
+      },
+      {
         "command": "references-view.showCallHierarchy",
         "title": "%cmd.references-view.showCallHierarchy%",
         "category": "Calls"
@@ -296,6 +301,11 @@
         },
         {
           "command": "references-view.showOutgoingCalls",
+          "group": "1",
+          "when": "view == references-view.tree && viewItem == call-item"
+        },
+        {
+          "command": "references-view.peekCallHierarchy",
           "group": "1",
           "when": "view == references-view.tree && viewItem == call-item"
         },

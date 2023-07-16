@@ -19,6 +19,7 @@
 	"cmd.references-view.copyPath": "Copy Path",
 	"cmd.references-view.refind": "Rerun",
 	"cmd.references-view.showCallHierarchy": "Show Call Hierarchy",
+	"cmd.references-view.peekCallHierarchy": "Peek Call Hierarchy",
 	"cmd.references-view.showOutgoingCalls": "Show Outgoing Calls",
 	"cmd.references-view.showIncomingCalls": "Show Incoming Calls",
 	"cmd.references-view.removeCallItem": "Dismiss",

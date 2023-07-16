@@ -17,6 +17,7 @@ export function register(tree: SymbolsTree, context: vscode.ExtensionContext): v
 			const input = new CallsTreeInput(new vscode.Location(vscode.window.activeTextEditor.document.uri, vscode.window.activeTextEditor.selection.active), direction.value);
 			tree.setInput(input);
 		}
+
 	}
 
 	function setCallsDirection(value: CallsDirection, anchor: CallItem | unknown) {
@@ -36,6 +37,7 @@ export function register(tree: SymbolsTree, context: vscode.ExtensionContext): v
 
 	context.subscriptions.push(
 		vscode.commands.registerCommand('references-view.showCallHierarchy', showCallHierarchy),
+		vscode.commands.registerCommand('references-view.peekCallHierarchy', showCallHierarchy),
 		vscode.commands.registerCommand('references-view.showOutgoingCalls', (item: CallItem | unknown) => setCallsDirection(CallsDirection.Outgoing, item)),
 		vscode.commands.registerCommand('references-view.showIncomingCalls', (item: CallItem | unknown) => setCallsDirection(CallsDirection.Incoming, item)),
 		vscode.commands.registerCommand('references-view.removeCallItem', removeCallItem)
